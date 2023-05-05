@@ -71,3 +71,20 @@ add (status bool);
 
 -- DDL Drop
 drop table roles;
+
+-- DML Insert
+insert into employees (employeeNumber, firstName, lastName, email, officeCode, reportsTo, jobTitle, extension)
+values (1703, "Andhika", "Ramadhan", "andhika@gmail.com", 1, 1002, "Staff", "x700");
+
+-- DML Update
+update employees 
+set firstName = "Andhika Update"
+where employeeNumber = 1703;
+
+-- DML Delete
+delete from employees where employeeNumber = 1703;
+
+-- SQL #3
+-- Indexes
+create index firstName on employees(firstName);
+select * from employees where firstName = 'Gerard';
