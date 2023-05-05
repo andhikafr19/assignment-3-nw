@@ -1,3 +1,4 @@
+-- SQL #1
 -- Queriying Data
 SELECT employeeNumber, firstName, lastName, jobTitle FROM employees;
 
@@ -58,4 +59,15 @@ inner join offices o
 on o.officeCode = e.officeCode 
 GROUP BY e.officeCode;
 
+-- SQL #2
+-- DDL Create
+create table roles 
+(roleID integer(5) primary key,
+roleName varchar(11));
 
+-- DDL Alter
+alter table roles 
+add (status bool);
+
+-- DDL Drop
+drop table roles;
